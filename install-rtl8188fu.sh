@@ -7,9 +7,6 @@ YELLOW='\033[0;33m'
 echo -e "${BLUE}Installing the dependencies...${NC}"
 sudo apt-get install build-essential git dkms linux-headers-$(uname -r)
 
-echo -e "\n${BLUE}Copying the git...${NC}"
-git clone https://github.com/kelebek333/rtl8188fu
-
 echo -e "\n${BLUE}Installing the driver...${NC}"
 sudo dkms install ./rtl8188fu
 sudo cp ./rtl8188fu/firmware/rtl8188fufw.bin /lib/firmware/rtlwifi/
