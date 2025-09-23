@@ -8,7 +8,8 @@ echo -e "${BLUE}Installing the dependencies...${NC}"
 sudo apt-get install build-essential git dkms linux-headers-$(uname -r)
 
 echo -e "\n${BLUE}Installing the driver...${NC}"
-sudo dkms install ./rtl8188fu
+sudo dkms install ../rtl8188fu
+mkdir -p /lib/firmware/rtlwifi
 sudo cp ./rtl8188fu/firmware/rtl8188fufw.bin /lib/firmware/rtlwifi/
 
 echo -e "\n${BLUE}Configuring the driver...${NC}"
@@ -24,5 +25,5 @@ echo 'alias usb:v0BDApF179d*dc*dsc*dp*icFFiscFFipFFin* rtl8188fu' | sudo tee /et
 
 echo -e "${BLUE}Activating the driver...${NC}"
 sudo update-initramfs -u
-sudo modprobe -r rtl8188fu
+sudo modprobe rtl8188fu
 
