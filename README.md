@@ -6,9 +6,27 @@ info: rtl8188fu support added to rtl8xxxu module of Linux kernel with version 6.
 
 ## How to install
 
+### Option 1: Automatic Install (Recommended)
+
+You can easily install the driver and set up all required configurations automatically using the provided installation script:
+
+`git clone https://github.com/risyady/rtl8188fu`
+
+`cd rtl8188fu`
+
+`chmod +x install-rtl8188fu.sh`
+
+`sudo ./install-rtl8188fu.sh`
+
+---
+
+### Option 2: Manual Install
+
+If you prefer to install manually, run the following commands:
+
 `sudo apt-get install build-essential git dkms linux-headers-$(uname -r)`
 
-`git clone https://github.com/kelebek333/rtl8188fu`
+`git clone https://github.com/risyady/rtl8188fu`
 
 `sudo dkms install ./rtl8188fu`
 
@@ -102,5 +120,3 @@ You can purge packages with following commands
 `sudo add-apt-repository -r ppa:kelebek333/kablosuz`
 
 `sudo apt update`
-
-------------------
