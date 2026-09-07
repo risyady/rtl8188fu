@@ -1,4 +1,4 @@
-RTL8188FU driver for Linux kernel 4.15.x ~ 6.7.x (Linux Mint, Ubuntu or Debian Derivatives)
+RTL8188FU driver for Linux kernel 4.15.x ~ 7.0.x (Linux Mint, Ubuntu or Debian Derivatives)
 
 info: rtl8188fu support added to rtl8xxxu module of Linux kernel with version 6.2. 
 
@@ -68,7 +68,7 @@ Run following command for up to kernel 6.1
 
 Run following commands for kernel 6.2 and up
 
-`sudo modprobe -r rtl8188fu`
+`sudo modprobe -r rtl8xxxu`
 
 `sudo modprobe rtl8188fu`
 
@@ -78,10 +78,7 @@ Run following commands for kernel 6.2 and up
 
 `sudo dkms remove rtl8188fu/1.0 --all`
 
-`sudo rm -f /lib/firmware/rtlwifi/rtl8188fufw.bin`
-
 `sudo rm -f /etc/modprobe.d/rtl8188fu.conf`
-
 
 ------------------
 
@@ -89,11 +86,11 @@ Run following commands for kernel 6.2 and up
 
 You can install rtl8188fu driver with following commands from PPA.
 
-for xUbuntu 16.04-18.04-20.04-22.04-23.04-23.10 / Linux Mint 20.x-21.x
+for Ubuntu base (Linux Mint, Pop!_OS, Zorin, Elementary etc.)
 
 `sudo add-apt-repository ppa:kelebek333/kablosuz`
 
-`sudo apt-get update`
+`sudo apt update`
 
 `sudo apt install rtl8188fu-dkms`
 
@@ -101,5 +98,9 @@ for xUbuntu 16.04-18.04-20.04-22.04-23.04-23.10 / Linux Mint 20.x-21.x
 You can purge packages with following commands
 
 `sudo apt purge rtl8188fu-dkms`
+
+`sudo add-apt-repository -r ppa:kelebek333/kablosuz`
+
+`sudo apt update`
 
 ------------------
